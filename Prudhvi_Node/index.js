@@ -12,10 +12,12 @@ const server = http.createServer(async (req, res) => {
         try {
             const client = new MongoClient(uri);
             await client.connect();
-            const jobs = await client.db("job_portal").collection("jobs").find({}).toArray();
+            const jobs = await client.db("job_portal").collection("jobs").find({}).sort({ id: 1 }).toArray();
             await client.close();
-
-            res.writeHead(200, { "Content-Type": "application/json" });
+            res.writeHead(200, {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+            });
             res.end(JSON.stringify(jobs));
         } catch (error) {
             console.error("Error fetching data:", error);
