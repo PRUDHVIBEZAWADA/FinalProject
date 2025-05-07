@@ -1,0 +1,289 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Verdana";
+  font-size:16px;
+}
+
+body {
+  display: grid;
+  font-family: "Verdana";
+  background-color: #f4f4f4;
+  height: 100vh;
+  line-height: 1.2;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+h2{
+  font-size: 20px;
+}
+
+.info h2{
+  margin-bottom: 10px;
+}
+
+.paper h2,p,a {
+ 
+  font-size: 16px;
+}
+
+
+header nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+header nav a:hover {
+  background-color: #555;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+a:hover {
+  color: #007BFF;
+  }
+
+a:hover {
+  color: #0056b3;
+  }
+
+.about {
+   display: grid; 
+   grid-template-columns: .6fr 2.4fr;
+   gap: 20px;
+   /*background-color: #afd2de;*/
+   background:radial-gradient(circle, rgb(170 134 161 / 41%) 0%, rgb(127 82 82 / 78%) 100%);
+   padding: 20px;
+   border-radius: 20px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about img {
+width: 100%;
+height: 100%; 
+object-fit: cover; 
+border-radius: 8px;
+}
+
+.about .info {
+display: block;
+height: 100%; 
+}
+
+.papers,.blogs {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: auto 1fr;
+grid-template-areas: 
+"heading heading heading heading";
+gap: 20px;
+/*background-color: #afd2de;*/
+padding: 20px;
+border-radius: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.papers
+{
+background: radial-gradient(circle, rgb(189 206 136 / 78%) 0%, rgb(137 56 83 / 47%) 100%);
+}
+
+.blogs{
+  background:radial-gradient(circle, rgb(65 48 103 / 52%) 0%, rgb(120 74 109 / 64%) 100%)
+}
+.papers .hpaper, .blogs .hpaper {
+grid-area: heading;
+text-align: left;
+font-weight: bold;
+}
+
+.paper{
+background-color: #f4f4f4;
+padding: 15px;
+border-radius: 8px;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+text-align: center;
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.paper:hover{
+box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+transform: scale(1.05);
+}
+
+.paper img, .blogs img {
+width: 100%;
+height: 150px;
+object-fit: cover;
+border-radius: 8px;
+background-color: #ddd;
+margin-bottom: 10px;
+}
+
+.paper p, .blogs p{
+color: black;
+margin-bottom: 10px;
+}
+
+.paper a, .blogs a {
+color: #007BFF;
+text-decoration: none;
+font-weight: bold;
+display: inline-block;
+transition: color 0.2s;
+}
+
+.paper a:hover, .blogs a:hover {
+color: #0056b3;
+}
+
+.paper h2{
+padding-bottom: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.hobbies {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: auto 1fr; 
+grid-template-areas:
+"heading heading heading" ;
+gap: 20px;
+background-color: #afd2de;
+background: radial-gradient(circle, rgb(105 99 178 / 83%) 0%, rgb(44 63 61 / 43%) 100%);
+padding: 20px;
+border-radius: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.hobbies h2 {
+grid-area: heading;
+font-size: 20px;
+color: #333;
+}
+
+
+.hobbies .hobby {
+background-color: #f4f4f4;
+padding: 10px;
+border-radius: 8px;
+text-align: center;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+
+.hobby img {
+width: 100%;
+height: 400px;
+object-fit: cover;
+border-radius: 8px;
+margin-bottom: 10px;
+}
+
+
+.hobby figcaption {
+font-size: 16px;
+color: black;
+}
+
+#btn {
+  display: none;
+  position: fixed;
+  bottom: 3px;
+  right: 19px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #af779e;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#btn:hover {
+  background-color: #555;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+
+
+  body {
+    font-family:"Verdana";
+   }
+
+  .container {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 20px;
+  }
+  
+  
+  .about {
+  grid-template-columns: 1fr;
+  }
+  
+  .papers {
+  grid-template-areas: "heading ";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  }
+  
+  .paper {
+  width: 100%;
+  }
+  
+  .blogs {
+  grid-template-areas: "heading ";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  }
+  
+  .hobbies {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:"heading";
+  gap: 20px;
+  }
+  
+}
