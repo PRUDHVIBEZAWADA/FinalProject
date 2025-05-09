@@ -27,10 +27,6 @@ h2{
   font-size: 20px;
 }
 
-.info h2{
-  margin-bottom: 10px;
-}
-
 .paper h2,p,a {
  
   font-size: 16px;
@@ -39,7 +35,7 @@ h2{
 
 header nav {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 20px;
   justify-items: center;
   align-items: center;
@@ -66,11 +62,7 @@ header nav a:hover {
 }
 
 a:hover {
-  color: #007BFF;
-  }
-
-a:hover {
-  color: #0056b3;
+  color: black;
   }
 
 .about {
@@ -78,11 +70,13 @@ a:hover {
    grid-template-columns: .6fr 2.4fr;
    gap: 20px;
    /*background-color: #afd2de;*/
-   background:radial-gradient(circle, rgb(170 134 161 / 41%) 0%, rgb(127 82 82 / 78%) 100%);
+   background:radial-gradient(circle, rgb(170 134 161 / 41%) 0%, rgb(69 69 69 / 78%) 100%);
    padding: 20px;
    border-radius: 20px;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   text-align: justify;
 }
+
 
 .about img {
 width: 100%;
@@ -94,6 +88,16 @@ border-radius: 8px;
 .about .info {
 display: block;
 height: 100%; 
+}
+
+.info h2
+{
+margin-bottom: 10px;
+}
+
+#education h2
+{
+ margin-top:10px
 }
 
 .papers,.blogs {
@@ -111,11 +115,11 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
 .papers
 {
-background: radial-gradient(circle, rgb(189 206 136 / 78%) 0%, rgb(137 56 83 / 47%) 100%);
+background: radial-gradient(circle, rgb(28 31 20 / 78%) 0%, rgb(137 56 83 / 47%) 100%);
 }
 
 .blogs{
-  background:radial-gradient(circle, rgb(65 48 103 / 52%) 0%, rgb(120 74 109 / 64%) 100%)
+  background:radial-gradient(circle, rgb(8 8 8 / 83%) 0%, rgb(211 188 205 / 64%) 100%);
 }
 .papers .hpaper, .blogs .hpaper {
 grid-area: heading;
@@ -168,6 +172,11 @@ color: #0056b3;
 padding-bottom: 10px;
 }
 
+.education h2
+{
+  margin-top: 10px;
+}
+
 footer {
   background-color: #333;
   color: white;
@@ -176,114 +185,83 @@ footer {
   font-size: 14px;
 }
 
-.hobbies {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: auto 1fr; 
-grid-template-areas:
-"heading heading heading" ;
-gap: 20px;
-background-color: #afd2de;
-background: radial-gradient(circle, rgb(105 99 178 / 83%) 0%, rgb(44 63 61 / 43%) 100%);
-padding: 20px;
-border-radius: 20px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.experience {
+  display: grid; 
+  grid-template-columns: 1fr;
+  gap: 20px;
+  /*background-color: #afd2de;*/
+  background:radial-gradient(circle, rgb(255 170 234 / 41%) 0%, rgb(127 82 82 / 78%) 100%);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.contact {
+  display: grid;
+  grid-template-columns:1f 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr; 
+  grid-template-areas:
+  "heading heading heading heading" ;
+  gap: 20px;
+  background-color: #afd2de;
+  background:radial-gradient(circle, rgb(47 118 109 / 83%) 0%, rgb(203 72 72 / 0%) 100%);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  }
+  
 
-.hobbies h2 {
-grid-area: heading;
-font-size: 20px;
-color: #333;
-}
-
-
-.hobbies .hobby {
-background-color: #f4f4f4;
-padding: 10px;
-border-radius: 8px;
-text-align: center;
-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-}
-
-
-.hobby img {
-width: 100%;
-height: 400px;
-object-fit: cover;
-border-radius: 8px;
-margin-bottom: 10px;
-}
+.contact h2 {
+  grid-area: heading;
+  font-size: 20px;
+  color: #333;
+  text-align: left;
+  }
 
 
-.hobby figcaption {
-font-size: 16px;
-color: black;
-}
+.contact img{
+  width: 52px;
+  height: 52px;
 
-#btn {
-  display: none;
-  position: fixed;
-  bottom: 3px;
-  right: 19px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: #af779e;
-  color: black;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
-
-#btn:hover {
-  background-color: #555;
-  color: white;
-}
-
-
+  }
 @media (max-width: 768px) {
 
-
   body {
-    font-family:"Verdana";
-   }
+    text-align: justify;
+  }
 
-  .container {
-  display: grid;
-  grid-template-columns: 1fr; 
-  gap: 20px;
+  header nav {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
   }
-  
-  
+
   .about {
-  grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
-  
-  .papers {
-  grid-template-areas: "heading ";
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-  gap: 20px;
+
+  .papers, .blogs, .contact {
+    grid-template-columns: 1fr;
+    grid-template-areas: "heading";
+    grid-template-rows: auto 1fr;
+    gap: 15px;
   }
-  
-  .paper {
-  width: 100%;
+
+  .paper, .blog {
+    width: 100%;
   }
-  
-  .blogs {
-  grid-template-areas: "heading ";
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-  gap: 20px;
+
+  .contact h2 {
+    text-align: center;
   }
-  
-  .hobbies {
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas:"heading";
-  gap: 20px;
+
+  .papers .hpaper, .blogs .hpaper {
+    text-align: center;
   }
-  
+
+  .about img {
+    width: 100%;
+    height: auto;
+  }
 }
