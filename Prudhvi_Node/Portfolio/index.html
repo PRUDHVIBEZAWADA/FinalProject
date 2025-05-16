@@ -8,7 +8,9 @@
 </head>
 <body>
   <header>
-    <nav>
+  <div class="header-container">
+    <button class="hamburger" aria-label="Menu">&#9776;</button>
+    <nav class="nav-links">
       <a href="#about">About Me</a>
       <a href="#education">Education</a>
       <a href="#papers">Projects</a>
@@ -16,7 +18,11 @@
       <a href="#blogs">Blogs</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
+
+
+
   <div class="container">
     <section id="about" class="about">
       <div class="imageContainer">
@@ -125,5 +131,14 @@
   <footer>
     <p>&copy; 2025 Prudhvi Bezawada's Personal Page. All rights reserved.</p>
 </footer>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
 </body>
 </html>
