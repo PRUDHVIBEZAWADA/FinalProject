@@ -132,12 +132,12 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
 .papers
 {
-background: radial-gradient(circle, rgb(189 206 136 / 78%) 0%, rgb(137 56 83 / 47%) 100%);
+background: radial-gradient(circle, rgb(170 134 161 / 41%) 0%, rgb(127 82 82 / 78%) 100%);;
 }
 
 .blogs{
 
-  background:radial-gradient(circle, rgb(105 99 178 / 83%) 0%, rgb(44 63 61 / 43%) 100%);
+  background:radial-gradient(circle, rgb(170 134 161 / 41%) 0%, rgb(127 82 82 / 78%) 100%);;
 }
 .papers .hpaper, .blogs .hpaper {
 grid-area: heading;
@@ -208,7 +208,7 @@ footer {
   grid-template-columns: 1fr;
   gap: 20px;
   /*background-color: #afd2de;*/
-  background:radial-gradient(circle, rgb(65 48 103 / 52%) 0%, rgb(120 74 109 / 64%) 100%);
+  background:radial-gradient(circle, rgb(170 134 161 / 41%) 0%, rgb(127 82 82 / 78%) 100%);
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -222,7 +222,7 @@ footer {
   "heading heading heading heading" ;
   gap: 20px;
   background-color: #afd2de;
-  background:radial-gradient(circle, rgb(47 118 109 / 83%) 0%, rgb(203 72 72 / 0%) 100%);
+  background:radial-gradient(circle, rgb(170 134 161 / 41%) 0%, rgb(127 82 82 / 78%) 100%);
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
